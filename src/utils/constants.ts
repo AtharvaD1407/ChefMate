@@ -11,7 +11,7 @@ const getApiBaseUrl = () => {
   
   if (__DEV__) {
     if (Platform.OS === 'android') {
-      const url = "http://192.168.29.176:3000";
+      const url = "http://10.253.181.199:3000";
       console.log('🔧 Using Android URL:', url);
       return url;
     } else {

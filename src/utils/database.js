@@ -1,4 +1,5 @@
 import * as SQLite from 'expo-sqlite';
+import { getRecipeImageUrl } from './dummyImages';
 
 // Database instance - will be initialized asynchronously
 let db = null;
@@ -116,7 +117,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_1.jpg",
+      image: getRecipeImageUrl("Spaghetti Carbonara") || "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800",
       ingredients: [
         { name: "Spaghetti", amount: 200, unit: "g" },
         { name: "Eggs", amount: 2, unit: "pcs" },
@@ -140,7 +141,7 @@ export const insertDummyData = async () => {
       prep_time: 30,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_2.jpg",
+      image: getRecipeImageUrl("Classic Margherita Pizza") || "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800",
       ingredients: [
         { name: "Pizza dough", amount: 1, unit: "ball" },
         { name: "Tomato sauce", amount: 0.5, unit: "cup" },
@@ -169,7 +170,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dinner",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_3.jpg",
+      image: getRecipeImageUrl("Creamy Chicken Alfredo") || "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800",
       ingredients: [
         { name: "Fettuccine pasta", amount: 1, unit: "lb" },
         { name: "Chicken breast", amount: 2, unit: "pieces" },
@@ -200,7 +201,7 @@ export const insertDummyData = async () => {
       prep_time: 20,
       category: "Dessert",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_4.jpg",
+      image: getRecipeImageUrl("Chocolate Chip Cookies") || "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800",
       ingredients: [
         { name: "All-purpose flour", amount: 2.25, unit: "cups" },
         { name: "Butter", amount: 1, unit: "cup" },
@@ -233,7 +234,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Dinner",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_5.jpg",
+      image: getRecipeImageUrl("Grilled Salmon with Lemon") || "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800",
       ingredients: [
         { name: "Salmon fillets", amount: 4, unit: "pieces" },
         { name: "Lemon", amount: 2, unit: "pieces" },
@@ -263,7 +264,7 @@ export const insertDummyData = async () => {
       prep_time: 5,
       category: "Breakfast",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_6.jpg",
+      image: getRecipeImageUrl("Avocado Toast") || "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=800",
       ingredients: [
         { name: "Bread slices", amount: 4, unit: "slices" },
         { name: "Ripe avocados", amount: 2, unit: "pieces" },
@@ -291,7 +292,7 @@ export const insertDummyData = async () => {
       prep_time: 20,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_7.jpg",
+      image: getRecipeImageUrl("Beef Stir Fry") || "https://images.unsplash.com/photo-1505254179099-0d2f2e48d8f5?w=800",
       ingredients: [
         { name: "Beef sirloin", amount: 1, unit: "lb" },
         { name: "Broccoli", amount: 2, unit: "cups" },
@@ -324,7 +325,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Lunch",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_8.jpg",
+      image: getRecipeImageUrl("Caesar Salad") || "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800",
       ingredients: [
         { name: "Romaine lettuce", amount: 2, unit: "heads" },
         { name: "Parmesan cheese", amount: 0.5, unit: "cup" },
@@ -354,7 +355,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Breakfast",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_9.jpg",
+      image: getRecipeImageUrl("Banana Pancakes") || "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800",
       ingredients: [
         { name: "All-purpose flour", amount: 1, unit: "cup" },
         { name: "Baking powder", amount: 2, unit: "tsp" },
@@ -385,7 +386,7 @@ export const insertDummyData = async () => {
       prep_time: 20,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_10.jpg",
+      image: getRecipeImageUrl("Chicken Tikka Masala") || "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=800",
       ingredients: [
         { name: "Chicken breast", amount: 1.5, unit: "lb" },
         { name: "Yogurt", amount: 0.5, unit: "cup" },
@@ -416,7 +417,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_11.jpg",
+      image: getRecipeImageUrl("French Onion Soup") || "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
       ingredients: [
         { name: "Yellow onions", amount: 4, unit: "large" },
         { name: "Butter", amount: 4, unit: "tbsp" },
@@ -445,7 +446,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_12.jpg",
+      image: getRecipeImageUrl("Vegetable Pad Thai") || "https://images.unsplash.com/photo-1559314809-0c1559c4ae33?w=800",
       ingredients: [
         { name: "Rice noodles", amount: 8, unit: "oz" },
         { name: "Tofu", amount: 8, unit: "oz" },
@@ -477,7 +478,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Dinner",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_13.jpg",
+      image: getRecipeImageUrl("Beef Tacos") || "https://images.unsplash.com/photo-1565299585323-38174c0a5e5a?w=800",
       ingredients: [
         { name: "Ground beef", amount: 1, unit: "lb" },
         { name: "Taco shells", amount: 12, unit: "pieces" },
@@ -506,7 +507,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_14.jpg",
+      image: getRecipeImageUrl("Mushroom Risotto") || "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800",
       ingredients: [
         { name: "Arborio rice", amount: 1.5, unit: "cups" },
         { name: "Mushrooms", amount: 1, unit: "lb" },
@@ -538,7 +539,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Lunch",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_15.jpg",
+      image: getRecipeImageUrl("Greek Salad") || "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=800",
       ingredients: [
         { name: "Cucumbers", amount: 2, unit: "medium" },
         { name: "Tomatoes", amount: 3, unit: "large" },
@@ -568,7 +569,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dinner",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_16.jpg",
+      image: getRecipeImageUrl("BBQ Pulled Pork") || "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800",
       ingredients: [
         { name: "Pork shoulder", amount: 3, unit: "lb" },
         { name: "BBQ sauce", amount: 1, unit: "cup" },
@@ -597,7 +598,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Dinner",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_17.jpg",
+      image: getRecipeImageUrl("Shrimp Scampi") || "https://images.unsplash.com/photo-1563379091339-03246963d29a?w=800",
       ingredients: [
         { name: "Shrimp", amount: 1.5, unit: "lb" },
         { name: "Linguine pasta", amount: 1, unit: "lb" },
@@ -629,7 +630,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Lunch",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_18.jpg",
+      image: getRecipeImageUrl("Chicken Caesar Wrap") || "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=800",
       ingredients: [
         { name: "Chicken breast", amount: 2, unit: "pieces" },
         { name: "Large tortillas", amount: 4, unit: "pieces" },
@@ -658,7 +659,7 @@ export const insertDummyData = async () => {
       prep_time: 30,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_19.jpg",
+      image: getRecipeImageUrl("Vegetable Lasagna") || "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=800",
       ingredients: [
         { name: "Lasagna noodles", amount: 12, unit: "pieces" },
         { name: "Ricotta cheese", amount: 2, unit: "cups" },
@@ -690,7 +691,7 @@ export const insertDummyData = async () => {
       prep_time: 20,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_20.jpg",
+      image: getRecipeImageUrl("Fish and Chips") || "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800",
       ingredients: [
         { name: "White fish fillets", amount: 1.5, unit: "lb" },
         { name: "Potatoes", amount: 4, unit: "large" },
@@ -721,7 +722,7 @@ export const insertDummyData = async () => {
       prep_time: 10,
       category: "Dessert",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_21.jpg",
+      image: getRecipeImageUrl("Mango Sticky Rice") || "https://images.unsplash.com/photo-1563805042-7684c019e1b5?w=800",
       ingredients: [
         { name: "Sticky rice", amount: 1, unit: "cup" },
         { name: "Coconut milk", amount: 1, unit: "can" },
@@ -749,7 +750,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dinner",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_22.jpg",
+      image: getRecipeImageUrl("Beef Burgers") || "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800",
       ingredients: [
         { name: "Ground beef", amount: 1.5, unit: "lb" },
         { name: "Burger buns", amount: 4, unit: "pieces" },
@@ -780,7 +781,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dinner",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_23.jpg",
+      image: getRecipeImageUrl("Chicken Noodle Soup") || "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
       ingredients: [
         { name: "Chicken breast", amount: 1, unit: "lb" },
         { name: "Egg noodles", amount: 8, unit: "oz" },
@@ -812,7 +813,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dessert",
       difficulty: "Easy",
-      image: "assets/recipes/recipe_24.jpg",
+      image: getRecipeImageUrl("Chocolate Brownies") || "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800",
       ingredients: [
         { name: "Butter", amount: 0.5, unit: "cup" },
         { name: "Dark chocolate", amount: 4, unit: "oz" },
@@ -843,7 +844,7 @@ export const insertDummyData = async () => {
       prep_time: 15,
       category: "Dinner",
       difficulty: "Medium",
-      image: "assets/recipes/recipe_25.jpg",
+      image: getRecipeImageUrl("Vegetable Curry") || "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=800",
       ingredients: [
         { name: "Mixed vegetables", amount: 4, unit: "cups" },
         { name: "Onion", amount: 1, unit: "medium" },
